@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="85e0566e-6049-4764-b634-c8ab4e4d6ee4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Program.java" afterPath="$PROJECT_DIR$/src/main/Program.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/User.java" afterPath="$PROJECT_DIR$/src/main/User.java" />
     </list>
     <ignored path="biblioteca-refactoring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,20 +60,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Program.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Program.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="46" selection-start="2826" selection-end="2826" vertical-scroll-proportion="0.0">
+            <state line="89" column="46" selection-start="3874" selection-end="3874" vertical-scroll-proportion="0.24147727">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="429" selection-end="429" vertical-scroll-proportion="0.48295453">
-              <folding />
+            <state line="9" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="docComment;class#User#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,8 +182,8 @@
         <option value="$PROJECT_DIR$/src/main/SystemConsole.java" />
         <option value="$PROJECT_DIR$/src/main/PrintBookCatalog.java" />
         <option value="$PROJECT_DIR$/src/main/ReserveBook.java" />
-        <option value="$PROJECT_DIR$/src/main/Program.java" />
         <option value="$PROJECT_DIR$/src/main/User.java" />
+        <option value="$PROJECT_DIR$/src/main/Program.java" />
       </list>
     </option>
   </component>
@@ -724,16 +725,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/main/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="46" selection-start="2826" selection-end="2826" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="9" column="13" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;class#User#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="429" selection-end="429" vertical-scroll-proportion="0.48295453">
+        <state line="89" column="46" selection-start="3874" selection-end="3874" vertical-scroll-proportion="0.24147727">
           <folding />
         </state>
       </provider>

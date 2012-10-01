@@ -87,7 +87,7 @@ public class Program {
     }
 
     private static void checkLibraryNumber() {
-        if (User.loggedIn) {
+        if ((user != null)&&(user.isLoggedIn())) {
             System.out.println("\nYour library number is " + savedLibraryNumber);
         } else {
             System.out.println("\nPlease talk to Librarian. Thank you.");
@@ -95,7 +95,6 @@ public class Program {
     }
 
     private static void clearLogin() {
-        User.loggedIn = false;
         savedLibraryNumber = "";
     }
 
