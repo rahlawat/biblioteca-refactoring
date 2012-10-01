@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85e0566e-6049-4764-b634-c8ab4e4d6ee4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/PrintBookCatalog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ReserveBook.java" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\dell\biblioteca-refactoring\out\production\biblioteca-refactoring\main\Movie.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\dell\biblioteca-refactoring\out\production\biblioteca-refactoring\main\PrintBookCatalog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\dell\biblioteca-refactoring\out\production\biblioteca-refactoring\main\ReserveBook.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\dell\biblioteca-refactoring\src\main\Movie.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\dell\biblioteca-refactoring\src\main\PrintBookCatalog.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Documents and Settings\dell\biblioteca-refactoring\src\main\ReserveBook.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Movie.java" afterPath="$PROJECT_DIR$/src/main/Movie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Program.java" afterPath="$PROJECT_DIR$/src/main/Program.java" />
     </list>
     <ignored path="biblioteca-refactoring.iws" />
@@ -64,28 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Movie.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Movie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="33" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintBookCatalog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/PrintBookCatalog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="1" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Program.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Program.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="51" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
+            <state line="73" column="21" selection-start="2959" selection-end="2959" vertical-scroll-proportion="-3.2982955">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,7 +81,7 @@
       <file leaf-file-name="StubbedInputStream.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/StubbedInputStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+            <state line="6" column="6" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,25 +90,16 @@
       <file leaf-file-name="InputStreamBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/InputStreamBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+            <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReserveBook.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/ReserveBook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgramTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProgramTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/ProgramTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="16" selection-start="1210" selection-end="1210" vertical-scroll-proportion="-0.6818182">
+            <state line="39" column="16" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,16 +261,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -305,6 +271,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="biblioteca-refactoring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -566,11 +542,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="746" extended-state="1" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.6706081" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -582,10 +559,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.6706081" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293919" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293919" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -659,6 +635,11 @@
         <state line="93" column="0" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ProgramTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="16" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.6.0_25/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="429" column="0" selection-start="15316" selection-end="15316" vertical-scroll-proportion="0.0" />
@@ -669,55 +650,31 @@
         <state line="62" column="0" selection-start="3273" selection-end="3273" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ReserveBook.java">
+    <entry file="file://$PROJECT_DIR$/src/test/StubbedInputStreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="45" column="96" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Movie.java">
+    <entry file="file://$PROJECT_DIR$/src/test/InputStreamBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/PrintBookCatalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/StubbedInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/InputStreamBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/StubbedInputStreamTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="96" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" />
+        <state line="6" column="6" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="51" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
+        <state line="73" column="21" selection-start="2959" selection-end="2959" vertical-scroll-proportion="-3.2982955">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ProgramTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="1210" selection-end="1210" vertical-scroll-proportion="-0.6818182">
-          <folding />
         </state>
       </provider>
     </entry>

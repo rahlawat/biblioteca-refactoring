@@ -1,38 +1,38 @@
 package main;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Program {
     private static boolean loggedIn = false;
     private static String savedLibraryNumber = "";
-    private static PrintBookCatalog bookCatalog = new PrintBookCatalog();
 
     public static void main(String[] args) {
         while (true) {
             printMenu();
-            performSelection();
-        }
-    }
 
-    private static void performSelection() {
-        int i1 = getUserChoice();
+            InputStreamReader inputStream = new InputStreamReader(System.in);
+            BufferedReader reader = new BufferedReader(inputStream);
+            int i1 = getUserChoice(reader);
 
-        if (i1 == 1) {
-            bookCatalog.printBookCatalog();
-        } else if (i1 == 2) {
-            reserveBook();
-        } else if (i1 == 3) {
-            checkLibraryNumber();
-        } else if (i1 == 4) {
-            printMovieCatalog();
-        } else if (i1 == 5) {
-            login();
+            if (i1 == 1) {
+                printBookCatalog();
+            } else if (i1 == 2) {
+                reserveBook(reader);
+            } else if (i1 == 3) {
+                checkLibraryNumber();
+            } else if (i1 == 4) {
+                printMovieCatalog();
+            } else if (i1 == 5) {
+                login(reader);
 
-        } else if (i1 == 9) {
-            quit();
-        } else {
-            wrongSelection();
+            } else if (i1 == 9) {
+                quit();
+                break;
+            } else {
+                wrongSelection();
+            }
         }
     }
 
@@ -53,65 +53,61 @@ public class Program {
     }
 
     private static void wrongSelection() {
-        System.out.println("\nEnter a valid integer!!");
+        System.out.println("\n");
+        System.out.println("Enter a valid integer!!");
     }
 
     private static void quit() {
         System.out.println("Quitting...");
     }
 
-    private static void login() {
+    private static void login(BufferedReader reader) {
         clearLogin();
-        BufferedReader reader = createBufferedReader();
         System.out.println("Enter your library number");
-        try {
-            String libraryNumber = reader.readLine();
+            String libraryNumber = readLine(reader);
             if (validLibraryNumber(libraryNumber)) {
-                try {
                     System.out.println("Enter your Password: ");
-                    String password = reader.readLine();
+                    String password = readLine(reader);
                     if (validPassword(password)) {
                         loggedIn = true;
                         savedLibraryNumber = libraryNumber;
                     }
-                } catch (Exception e) {
-
-                }
             }
-        } catch (Exception e) {
+    }
 
+    private static String readLine(BufferedReader reader) {
+        try{
+            return reader.readLine();
+        } catch(Exception e){
+            return "";
         }
+
     }
 
     private static void printMovieCatalog() {
-        System.out.println(new Movie("Rocky", "John G. Avildsen", "10").toString());
-        System.out.println(new Movie("Rocky II", "John G. Avildsen", "9").toString());
-        System.out.println(new Movie("Rocky III", "John G. Avildsen", "8").toString());
-        System.out.println(new Movie("Rocky IV", "John G. Avildsen", "7").toString());
-        System.out.println(new Movie("Rocky V", "John G. Avildsen", "8").toString());
-        System.out.println(new Movie("Drainage", "Francisco Trindade", "N/A").toString());
-        System.out.println(new Movie("The Shawshank Redemption", "Frank Darabont", "10").toString());
-        System.out.println(new Movie("The Godfather", "Francis Ford Coppola", "7").toString());
-        System.out.println(new Movie("Inception", "Frank Darabont", "10").toString());
-        System.out.println(new Movie("Pulp Fiction", "Quentin Tarantino", "6").toString());
+        System.out.println(createMovie("Rocky", "John G. Avildsen", "10"));
+        System.out.println(createMovie("Rocky II", "John G. Avildsen", "9"));
+        System.out.println(createMovie("Rocky III", "John G. Avildsen", "8"));
+        System.out.println(createMovie("Rocky IV", "John G. Avildsen", "7"));
+        System.out.println(createMovie("Rocky V", "John G. Avildsen", "8"));
+        System.out.println(createMovie("Drainage", "Francisco Trindade", "N/A"));
+        System.out.println(createMovie("The Shawshank Redemption", "Frank Darabont", "10"));
+        System.out.println(createMovie("The Godfather", "Francis Ford Coppola", "7"));
+        System.out.println(createMovie("Inception", "Frank Darabont", "10"));
+        System.out.println(createMovie("Pulp Fiction", "Quentin Tarantino", "6"));
     }
 
     private static void checkLibraryNumber() {
-        if (loggedIn) {
+        if (loggedIn()) {
             System.out.println("\nYour library number is " + savedLibraryNumber);
         } else {
             System.out.println("\nPlease talk to Librarian. Thank you.");
         }
     }
 
-    private static BufferedReader createBufferedReader() {
-        InputStreamReader inputStream = new InputStreamReader(System.in);
-        return new BufferedReader(inputStream);
-    }
-
-    private static void reserveBook() {
+    private static void reserveBook(BufferedReader reader) {
         System.out.println(" Please enter the number of the book you wish to checkout: ");
-        int i2 =  getUserChoice();
+        int i2 =  getUserChoice(reader);
         switch (i2) {
             case 1:
                 System.out.println("\n");
@@ -135,8 +131,7 @@ public class Program {
         }
     }
 
-    private static int getUserChoice() {
-        BufferedReader reader = createBufferedReader();
+    private static int getUserChoice(BufferedReader reader) {
         try {
             return Integer.parseInt(reader.readLine());
         } catch (Exception e) {
@@ -147,6 +142,13 @@ public class Program {
 
     }
 
+    private static void printBookCatalog() {
+        System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
+        System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
+        System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
+        System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
+    }
+
     private static boolean validPassword(String password) {
         return "bhaisahab".equals(password);
     }
@@ -155,11 +157,18 @@ public class Program {
         return libraryNumber.matches("\\d\\d\\d-\\d\\d\\d\\d");
     }
 
+    private static boolean loggedIn() {
+        return loggedIn;
+    }
+
 
     private static void clearLogin() {
         loggedIn = false;
         savedLibraryNumber = "";
     }
 
+    private static String createMovie(String movieTitle, String movieDirector, String movieRanking) {
+        return movieTitle + " - Director: " + movieDirector + " Rating: " + movieRanking;
+    }
 }
 
