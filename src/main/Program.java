@@ -6,32 +6,35 @@ import java.io.InputStreamReader;
 public class Program {
     private static boolean loggedIn = false;
     private static String savedLibraryNumber = "";
+    private static PrintBookCatalog bookCatalog = new PrintBookCatalog();
 
     public static void main(String[] args) {
         while (true) {
             printMenu();
-
-
-            int i1 = getUserChoice();
-
-            if (i1 == 1) {
-                printBookCatalog();
-            } else if (i1 == 2) {
-                reserveBook();
-            } else if (i1 == 3) {
-                checkLibraryNumber();
-            } else if (i1 == 4) {
-                printMovieCatalog();
-            } else if (i1 == 5) {
-                login();
-
-            } else if (i1 == 9) {
-                quit();
-                break;
-            } else {
-                wrongSelection();
-            }
+            if (performUserSelection()) break;
         }
+    }
+
+    private static boolean performUserSelection() {
+        int i1 = getUserChoice();
+        if (i1 == 1) {
+            bookCatalog.printBookCatalog();
+        } else if (i1 == 2) {
+            reserveBook();
+        } else if (i1 == 3) {
+            checkLibraryNumber();
+        } else if (i1 == 4) {
+            printMovieCatalog();
+        } else if (i1 == 5) {
+            login();
+
+        } else if (i1 == 9) {
+            quit();
+            return true;
+        } else {
+            wrongSelection();
+        }
+        return false;
     }
 
     private static void printMenu() {
@@ -140,13 +143,6 @@ public class Program {
             return 0;
         }
 
-    }
-
-    private static void printBookCatalog() {
-        System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
-        System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
-        System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
-        System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
     }
 
     private static boolean validPassword(String password) {
