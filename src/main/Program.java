@@ -1,12 +1,11 @@
 package main;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 public class Program {
     private static boolean loggedIn = false;
     private static String savedLibraryNumber = "";
+    private static SystemConsole console = new SystemConsole();
     private static PrintBookCatalog bookCatalog = new PrintBookCatalog();
+    private static ReserveBook reserve = new ReserveBook(console);
 
     public static void main(String[] args) {
         while (true) {
@@ -16,11 +15,11 @@ public class Program {
     }
 
     private static boolean performUserSelection() {
-        int i1 = getUserChoice();
+        int i1 = SystemConsole.readInt();
         if (i1 == 1) {
             bookCatalog.printBookCatalog();
         } else if (i1 == 2) {
-            reserveBook();
+            ReserveBook.reserveBook();
         } else if (i1 == 3) {
             checkLibraryNumber();
         } else if (i1 == 4) {
@@ -65,26 +64,15 @@ public class Program {
     private static void login() {
         clearLogin();
         System.out.println("Enter your library number");
-            String libraryNumber = readLine();
+            String libraryNumber = console.readLine();
             if (validLibraryNumber(libraryNumber)) {
                     System.out.println("Enter your Password: ");
-                    String password = readLine();
+                    String password = console.readLine();
                     if (validPassword(password)) {
                         loggedIn = true;
                         savedLibraryNumber = libraryNumber;
                     }
             }
-    }
-
-    private static String readLine() {
-        InputStreamReader inputStream = new InputStreamReader(System.in);
-        BufferedReader reader = new BufferedReader(inputStream);
-        try{
-            return reader.readLine();
-        } catch(Exception e){
-            return "";
-        }
-
     }
 
     private static void printMovieCatalog() {
@@ -106,43 +94,6 @@ public class Program {
         } else {
             System.out.println("\nPlease talk to Librarian. Thank you.");
         }
-    }
-
-    private static void reserveBook() {
-        System.out.println(" Please enter the number of the book you wish to checkout: ");
-        int i2 =  getUserChoice();
-        switch (i2) {
-            case 1:
-                System.out.println("\n");
-                System.out.println(" Thank You! Enjoy the book.");
-                break;
-            case 2:
-                System.out.println("\n");
-                System.out.println(" Thank You! Enjoy the book.");
-                break;
-            case 3:
-                System.out.println("\n");
-                System.out.println(" Thank You! Enjoy the book.");
-                break;
-            case 4:
-                System.out.println("\n");
-                System.out.println(" Thank You! Enjoy the book.");
-                break;
-            default:
-                System.out.println("\n");
-                System.out.println("Sorry we don't have that book yet.");
-        }
-    }
-
-    private static int getUserChoice() {
-        try {
-            return Integer.parseInt(readLine());
-        } catch (Exception e) {
-            // Do you know what numbers are!!!
-            System.out.println("Enter a valid integer!!");
-            return 0;
-        }
-
     }
 
     private static boolean validPassword(String password) {
