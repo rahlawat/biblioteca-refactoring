@@ -37,36 +37,7 @@ public class Program {
             if (i1 == 1) {
                 printBookCatalog();
             } else if (i1 == 2) {
-                System.out.println(" Please enter the number of the book you wish to checkout: ");
-                int i2 = 0;
-                try {
-                    i2 = Integer.parseInt(reader.readLine());
-                } catch (Exception e) {
-                    // Do you know what numbers are!!!
-                    System.out.println("Enter a valid integer!!");
-
-                }
-                switch (i2) {
-                    case 1:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    case 2:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    case 3:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    case 4:
-                        System.out.println("\n");
-                        System.out.println(" Thank You! Enjoy the book.");
-                        break;
-                    default:
-                        System.out.println("\n");
-                        System.out.println("Sorry we don't have that book yet.");
-                }
+                reserveBook(reader);
             } else if (i1 == 3) {
                 if (loggedIn()) {
                     System.out.println("\n");
@@ -115,6 +86,39 @@ public class Program {
                 System.out.println("\n");
                 System.out.println("Enter a valid integer!!");
             }
+        }
+    }
+
+    private static void reserveBook(BufferedReader reader) {
+        System.out.println(" Please enter the number of the book you wish to checkout: ");
+        int i2 = 0;
+        try {
+            i2 = Integer.parseInt(reader.readLine());
+        } catch (Exception e) {
+            // Do you know what numbers are!!!
+            System.out.println("Enter a valid integer!!");
+
+        }
+        switch (i2) {
+            case 1:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            case 2:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            case 3:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            case 4:
+                System.out.println("\n");
+                System.out.println(" Thank You! Enjoy the book.");
+                break;
+            default:
+                System.out.println("\n");
+                System.out.println("Sorry we don't have that book yet.");
         }
     }
 

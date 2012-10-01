@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85e0566e-6049-4764-b634-c8ab4e4d6ee4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Program.java" afterPath="$PROJECT_DIR$/src/main/Program.java" />
     </list>
     <ignored path="biblioteca-refactoring.iws" />
@@ -64,7 +63,7 @@
       <file leaf-file-name="Program.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="16" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.17989418">
+            <state line="39" column="16" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.29982364">
               <folding />
             </state>
           </provider>
@@ -594,7 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.17989418">
+        <state line="39" column="16" selection-start="2018" selection-end="2018" vertical-scroll-proportion="0.29982364">
           <folding />
         </state>
       </provider>
