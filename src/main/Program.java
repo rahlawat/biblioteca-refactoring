@@ -31,25 +31,9 @@ public class Program {
             } else if (i1 == 2) {
                 reserveBook();
             } else if (i1 == 3) {
-                if (loggedIn()) {
-                    System.out.println("\n");
-                    System.out.println("Your library number is " + savedLibraryNumber);
-                } else {
-
-                    System.out.println("\n");
-                    System.out.println("Please talk to Librarian. Thank you.");
-                }
+                login();
             } else if (i1 == 4) {
-                System.out.println(createMovie("Rocky", "John G. Avildsen", "10"));
-                System.out.println(createMovie("Rocky II", "John G. Avildsen", "9"));
-                System.out.println(createMovie("Rocky III", "John G. Avildsen", "8"));
-                System.out.println(createMovie("Rocky IV", "John G. Avildsen", "7"));
-                System.out.println(createMovie("Rocky V", "John G. Avildsen", "8"));
-                System.out.println(createMovie("Drainage", "Francisco Trindade", "N/A"));
-                System.out.println(createMovie("The Shawshank Redemption", "Frank Darabont", "10"));
-                System.out.println(createMovie("The Godfather", "Francis Ford Coppola", "7"));
-                System.out.println(createMovie("Inception", "Frank Darabont", "10"));
-                System.out.println(createMovie("Pulp Fiction", "Quentin Tarantino", "6"));
+                printMovieCatalog();
             } else if (i1 == 5) {
                 clearLogin();
                 System.out.println("Enter your library number");
@@ -78,6 +62,27 @@ public class Program {
                 System.out.println("\n");
                 System.out.println("Enter a valid integer!!");
             }
+        }
+    }
+
+    private static void printMovieCatalog() {
+        System.out.println(createMovie("Rocky", "John G. Avildsen", "10"));
+        System.out.println(createMovie("Rocky II", "John G. Avildsen", "9"));
+        System.out.println(createMovie("Rocky III", "John G. Avildsen", "8"));
+        System.out.println(createMovie("Rocky IV", "John G. Avildsen", "7"));
+        System.out.println(createMovie("Rocky V", "John G. Avildsen", "8"));
+        System.out.println(createMovie("Drainage", "Francisco Trindade", "N/A"));
+        System.out.println(createMovie("The Shawshank Redemption", "Frank Darabont", "10"));
+        System.out.println(createMovie("The Godfather", "Francis Ford Coppola", "7"));
+        System.out.println(createMovie("Inception", "Frank Darabont", "10"));
+        System.out.println(createMovie("Pulp Fiction", "Quentin Tarantino", "6"));
+    }
+
+    private static void login() {
+        if (loggedIn) {
+            System.out.println("\nYour library number is " + savedLibraryNumber);
+        } else {
+            System.out.println("\nPlease talk to Librarian. Thank you.");
         }
     }
 
@@ -136,10 +141,6 @@ public class Program {
 
     private static boolean validLibraryNumber(String libraryNumber) {
         return libraryNumber.matches("\\d\\d\\d-\\d\\d\\d\\d");
-    }
-
-    private static boolean loggedIn() {
-        return loggedIn;
     }
 
 
