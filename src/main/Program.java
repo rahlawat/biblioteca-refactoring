@@ -35,10 +35,7 @@ public class Program {
             }
 
             if (i1 == 1) {
-                System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
-                System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
-                System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
-                System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
+                printBookCatalog();
             } else if (i1 == 2) {
                 System.out.println(" Please enter the number of the book you wish to checkout: ");
                 int i2 = 0;
@@ -119,6 +116,13 @@ public class Program {
                 System.out.println("Enter a valid integer!!");
             }
         }
+    }
+
+    private static void printBookCatalog() {
+        System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
+        System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
+        System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
+        System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
     }
 
     private static boolean validPassword(String password) {
