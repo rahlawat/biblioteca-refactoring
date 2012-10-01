@@ -14,7 +14,7 @@ public class ReserveBook {
         this.console = console;
     }
 
-    static void reserveBook() {
+    public void reserveBook() {
         System.out.println(" Please enter the number of the book you wish to checkout: ");
         int i2 =  SystemConsole.readInt();
         switch (i2) {

@@ -1,11 +1,11 @@
 package main;
 
 public class Program {
-    private static boolean loggedIn = false;
     private static String savedLibraryNumber = "";
     private static SystemConsole console = new SystemConsole();
     private static PrintBookCatalog bookCatalog = new PrintBookCatalog();
     private static ReserveBook reserve = new ReserveBook(console);
+    private static User user;
 
     public static void main(String[] args) {
         while (true) {
@@ -19,7 +19,7 @@ public class Program {
         if (i1 == 1) {
             bookCatalog.printBookCatalog();
         } else if (i1 == 2) {
-            ReserveBook.reserveBook();
+            reserve.reserveBook();
         } else if (i1 == 3) {
             checkLibraryNumber();
         } else if (i1 == 4) {
@@ -65,15 +65,11 @@ public class Program {
         clearLogin();
         System.out.println("Enter your library number");
             String libraryNumber = console.readLine();
-            if (validLibraryNumber(libraryNumber)) {
-                    System.out.println("Enter your Password: ");
-                    String password = console.readLine();
-                    if (validPassword(password)) {
-                        loggedIn = true;
-                        savedLibraryNumber = libraryNumber;
-                    }
-            }
-    }
+            System.out.println("Enter your Password: ");
+            String password = console.readLine();
+                user = new User(libraryNumber,password);
+                    user.validateUser();
+     }
 
     private static void printMovieCatalog() {
         System.out.println(createMovie("Rocky", "John G. Avildsen", "10"));
@@ -89,23 +85,15 @@ public class Program {
     }
 
     private static void checkLibraryNumber() {
-        if (loggedIn) {
+        if (User.loggedIn) {
             System.out.println("\nYour library number is " + savedLibraryNumber);
         } else {
             System.out.println("\nPlease talk to Librarian. Thank you.");
         }
     }
 
-    private static boolean validPassword(String password) {
-        return "bhaisahab".equals(password);
-    }
-
-    private static boolean validLibraryNumber(String libraryNumber) {
-        return libraryNumber.matches("\\d\\d\\d-\\d\\d\\d\\d");
-    }
-
     private static void clearLogin() {
-        loggedIn = false;
+        User.loggedIn = false;
         savedLibraryNumber = "";
     }
 
