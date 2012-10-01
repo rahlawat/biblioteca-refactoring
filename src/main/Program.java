@@ -31,29 +31,11 @@ public class Program {
             } else if (i1 == 2) {
                 reserveBook();
             } else if (i1 == 3) {
-                login();
+                checkLibraryNumber();
             } else if (i1 == 4) {
                 printMovieCatalog();
             } else if (i1 == 5) {
-                clearLogin();
-                System.out.println("Enter your library number");
-                try {
-                    String libraryNumber = reader.readLine();
-                    if (validLibraryNumber(libraryNumber)) {
-                        try {
-                            System.out.println("Enter your Password: ");
-                            String password = reader.readLine();
-                            if (validPassword(password)) {
-                                loggedIn = true;
-                                savedLibraryNumber = libraryNumber;
-                            }
-                        } catch (Exception e) {
-
-                        }
-                    }
-                } catch (Exception e) {
-
-                }
+                login();
 
             } else if (i1 == 9) {
                 System.out.println("Quitting...");
@@ -62,6 +44,29 @@ public class Program {
                 System.out.println("\n");
                 System.out.println("Enter a valid integer!!");
             }
+        }
+    }
+
+    private static void login() {
+        clearLogin();
+        BufferedReader reader = createBufferedReader();
+        System.out.println("Enter your library number");
+        try {
+            String libraryNumber = reader.readLine();
+            if (validLibraryNumber(libraryNumber)) {
+                try {
+                    System.out.println("Enter your Password: ");
+                    String password = reader.readLine();
+                    if (validPassword(password)) {
+                        loggedIn = true;
+                        savedLibraryNumber = libraryNumber;
+                    }
+                } catch (Exception e) {
+
+                }
+            }
+        } catch (Exception e) {
+
         }
     }
 
@@ -78,7 +83,7 @@ public class Program {
         System.out.println(createMovie("Pulp Fiction", "Quentin Tarantino", "6"));
     }
 
-    private static void login() {
+    private static void checkLibraryNumber() {
         if (loggedIn) {
             System.out.println("\nYour library number is " + savedLibraryNumber);
         } else {
