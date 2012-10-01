@@ -23,14 +23,13 @@ public class Program {
             System.out.println("**********************************************************");
             System.out.println("Your Selection: ");
 
-            InputStreamReader inputStream = new InputStreamReader(System.in);
-            BufferedReader reader = new BufferedReader(inputStream);
-            int i1 = getUserChoice(reader);
+            BufferedReader reader = createBufferedReader();
+            int i1 = getUserChoice();
 
             if (i1 == 1) {
                 printBookCatalog();
             } else if (i1 == 2) {
-                reserveBook(reader);
+                reserveBook();
             } else if (i1 == 3) {
                 if (loggedIn()) {
                     System.out.println("\n");
@@ -82,9 +81,14 @@ public class Program {
         }
     }
 
-    private static void reserveBook(BufferedReader reader) {
+    private static BufferedReader createBufferedReader() {
+        InputStreamReader inputStream = new InputStreamReader(System.in);
+        return new BufferedReader(inputStream);
+    }
+
+    private static void reserveBook() {
         System.out.println(" Please enter the number of the book you wish to checkout: ");
-        int i2 =  getUserChoice(reader);
+        int i2 =  getUserChoice();
         switch (i2) {
             case 1:
                 System.out.println("\n");
@@ -108,7 +112,8 @@ public class Program {
         }
     }
 
-    private static int getUserChoice(BufferedReader reader) {
+    private static int getUserChoice() {
+        BufferedReader reader = createBufferedReader();
         try {
             return Integer.parseInt(reader.readLine());
         } catch (Exception e) {
