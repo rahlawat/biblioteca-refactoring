@@ -1,7 +1,6 @@
 package main;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Program {
@@ -12,20 +11,19 @@ public class Program {
         while (true) {
             printMenu();
 
-            InputStreamReader inputStream = new InputStreamReader(System.in);
-            BufferedReader reader = new BufferedReader(inputStream);
-            int i1 = getUserChoice(reader);
+
+            int i1 = getUserChoice();
 
             if (i1 == 1) {
                 printBookCatalog();
             } else if (i1 == 2) {
-                reserveBook(reader);
+                reserveBook();
             } else if (i1 == 3) {
                 checkLibraryNumber();
             } else if (i1 == 4) {
                 printMovieCatalog();
             } else if (i1 == 5) {
-                login(reader);
+                login();
 
             } else if (i1 == 9) {
                 quit();
@@ -61,13 +59,13 @@ public class Program {
         System.out.println("Quitting...");
     }
 
-    private static void login(BufferedReader reader) {
+    private static void login() {
         clearLogin();
         System.out.println("Enter your library number");
-            String libraryNumber = readLine(reader);
+            String libraryNumber = readLine();
             if (validLibraryNumber(libraryNumber)) {
                     System.out.println("Enter your Password: ");
-                    String password = readLine(reader);
+                    String password = readLine();
                     if (validPassword(password)) {
                         loggedIn = true;
                         savedLibraryNumber = libraryNumber;
@@ -75,7 +73,9 @@ public class Program {
             }
     }
 
-    private static String readLine(BufferedReader reader) {
+    private static String readLine() {
+        InputStreamReader inputStream = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(inputStream);
         try{
             return reader.readLine();
         } catch(Exception e){
@@ -98,16 +98,16 @@ public class Program {
     }
 
     private static void checkLibraryNumber() {
-        if (loggedIn()) {
+        if (loggedIn) {
             System.out.println("\nYour library number is " + savedLibraryNumber);
         } else {
             System.out.println("\nPlease talk to Librarian. Thank you.");
         }
     }
 
-    private static void reserveBook(BufferedReader reader) {
+    private static void reserveBook() {
         System.out.println(" Please enter the number of the book you wish to checkout: ");
-        int i2 =  getUserChoice(reader);
+        int i2 =  getUserChoice();
         switch (i2) {
             case 1:
                 System.out.println("\n");
@@ -131,9 +131,9 @@ public class Program {
         }
     }
 
-    private static int getUserChoice(BufferedReader reader) {
+    private static int getUserChoice() {
         try {
-            return Integer.parseInt(reader.readLine());
+            return Integer.parseInt(readLine());
         } catch (Exception e) {
             // Do you know what numbers are!!!
             System.out.println("Enter a valid integer!!");
@@ -156,11 +156,6 @@ public class Program {
     private static boolean validLibraryNumber(String libraryNumber) {
         return libraryNumber.matches("\\d\\d\\d-\\d\\d\\d\\d");
     }
-
-    private static boolean loggedIn() {
-        return loggedIn;
-    }
-
 
     private static void clearLogin() {
         loggedIn = false;
