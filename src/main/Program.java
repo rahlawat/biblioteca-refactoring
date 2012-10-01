@@ -6,19 +6,20 @@ import java.io.InputStreamReader;
 public class Program {
     private static boolean loggedIn = false;
     private static String savedLibraryNumber = "";
+    private static PrintBookCatalog bookCatalog = new PrintBookCatalog();
 
     public static void main(String[] args) {
         while (true) {
             printMenu();
-            menuSelection();
+            performSelection();
         }
     }
 
-    private static void menuSelection() {
+    private static void performSelection() {
         int i1 = getUserChoice();
 
         if (i1 == 1) {
-            printBookCatalog();
+            bookCatalog.printBookCatalog();
         } else if (i1 == 2) {
             reserveBook();
         } else if (i1 == 3) {
@@ -29,10 +30,9 @@ public class Program {
             login();
 
         } else if (i1 == 9) {
-            System.out.println("Quitting...");
+            quit();
         } else {
-            System.out.println("\n");
-            System.out.println("Enter a valid integer!!");
+            wrongSelection();
         }
     }
 
@@ -50,6 +50,14 @@ public class Program {
         System.out.println("*         9. Exit                                        *");
         System.out.println("**********************************************************");
         System.out.println("Your Selection: ");
+    }
+
+    private static void wrongSelection() {
+        System.out.println("\nEnter a valid integer!!");
+    }
+
+    private static void quit() {
+        System.out.println("Quitting...");
     }
 
     private static void login() {
@@ -76,16 +84,16 @@ public class Program {
     }
 
     private static void printMovieCatalog() {
-        System.out.println(new Movie("Rocky", "John G. Avildsen", "10"));
-        System.out.println(new Movie("Rocky II", "John G. Avildsen", "9"));
-        System.out.println(new Movie("Rocky III", "John G. Avildsen", "8"));
-        System.out.println(new Movie("Rocky IV", "John G. Avildsen", "7"));
-        System.out.println(new Movie("Rocky V", "John G. Avildsen", "8"));
-        System.out.println(new Movie("Drainage", "Francisco Trindade", "N/A"));
-        System.out.println(new Movie("The Shawshank Redemption", "Frank Darabont", "10"));
-        System.out.println(new Movie("The Godfather", "Francis Ford Coppola", "7"));
-        System.out.println(new Movie("Inception", "Frank Darabont", "10"));
-        System.out.println(new Movie("Pulp Fiction", "Quentin Tarantino", "6"));
+        System.out.println(new Movie("Rocky", "John G. Avildsen", "10").toString());
+        System.out.println(new Movie("Rocky II", "John G. Avildsen", "9").toString());
+        System.out.println(new Movie("Rocky III", "John G. Avildsen", "8").toString());
+        System.out.println(new Movie("Rocky IV", "John G. Avildsen", "7").toString());
+        System.out.println(new Movie("Rocky V", "John G. Avildsen", "8").toString());
+        System.out.println(new Movie("Drainage", "Francisco Trindade", "N/A").toString());
+        System.out.println(new Movie("The Shawshank Redemption", "Frank Darabont", "10").toString());
+        System.out.println(new Movie("The Godfather", "Francis Ford Coppola", "7").toString());
+        System.out.println(new Movie("Inception", "Frank Darabont", "10").toString());
+        System.out.println(new Movie("Pulp Fiction", "Quentin Tarantino", "6").toString());
     }
 
     private static void checkLibraryNumber() {
@@ -136,13 +144,7 @@ public class Program {
             System.out.println("Enter a valid integer!!");
             return 0;
         }
-    }
 
-    private static void printBookCatalog() {
-        System.out.println(" 1. Sweet Valley High vol. 4 by John Travolta ");
-        System.out.println(" 2. eXtreme Programming Explained by Kent Beck ");
-        System.out.println(" 3. How to Win Friends and Influence People by Dale Carnagie ");
-        System.out.println(" 4. How to Cheat at TWU Assignements by Anonymous ");
     }
 
     private static boolean validPassword(String password) {
