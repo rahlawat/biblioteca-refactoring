@@ -25,14 +25,7 @@ public class Program {
 
             InputStreamReader inputStream = new InputStreamReader(System.in);
             BufferedReader reader = new BufferedReader(inputStream);
-            int i1 = 0;
-            try {
-                String value = reader.readLine();
-                i1 = Integer.parseInt(value);
-            } catch (Exception e) {
-                // Do you know what numbers are!!!
-                System.out.println("Enter a valid integer!!");
-            }
+            int i1 = getUserChoice(reader);
 
             if (i1 == 1) {
                 printBookCatalog();
@@ -91,14 +84,7 @@ public class Program {
 
     private static void reserveBook(BufferedReader reader) {
         System.out.println(" Please enter the number of the book you wish to checkout: ");
-        int i2 = 0;
-        try {
-            i2 = Integer.parseInt(reader.readLine());
-        } catch (Exception e) {
-            // Do you know what numbers are!!!
-            System.out.println("Enter a valid integer!!");
-
-        }
+        int i2 =  getUserChoice(reader);
         switch (i2) {
             case 1:
                 System.out.println("\n");
@@ -120,6 +106,18 @@ public class Program {
                 System.out.println("\n");
                 System.out.println("Sorry we don't have that book yet.");
         }
+    }
+
+    private static int getUserChoice(BufferedReader reader) {
+        int i2 = ;
+        try {
+            i2 = Integer.parseInt(reader.readLine());
+        } catch (Exception e) {
+            // Do you know what numbers are!!!
+            System.out.println("Enter a valid integer!!");
+
+        }
+        return i2;
     }
 
     private static void printBookCatalog() {
