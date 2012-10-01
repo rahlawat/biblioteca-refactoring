@@ -109,15 +109,13 @@ public class Program {
     }
 
     private static int getUserChoice(BufferedReader reader) {
-        int i2 = ;
         try {
-            i2 = Integer.parseInt(reader.readLine());
+            return Integer.parseInt(reader.readLine());
         } catch (Exception e) {
             // Do you know what numbers are!!!
             System.out.println("Enter a valid integer!!");
-
+            return 0;
         }
-        return i2;
     }
 
     private static void printBookCatalog() {
