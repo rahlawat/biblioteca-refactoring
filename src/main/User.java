@@ -17,15 +17,9 @@ public class User {
         this.password = password;
     }
 
-    public boolean validPassword() {
-        return "bhaisahab".equals(password);
-    }
-
-    public boolean validLibraryNumber() {
-        return libraryNumber.matches("\\d\\d\\d-\\d\\d\\d\\d");
-    }
-    public void validateUser(){
+    public boolean validateUser(){
         loggedIn = ((libraryNumber.matches("\\d\\d\\d-\\d\\d\\d\\d")) && ("bhaisahab".equals(password)));
+        return loggedIn;
     }
     public boolean isLoggedIn()
     {

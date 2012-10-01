@@ -68,7 +68,9 @@ public class Program {
             System.out.println("Enter your Password: ");
             String password = console.readLine();
                 user = new User(libraryNumber,password);
-                    user.validateUser();
+                    if (user.validateUser()) {
+                        savedLibraryNumber = libraryNumber;
+                    }
      }
 
     private static void printMovieCatalog() {
